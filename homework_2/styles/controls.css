@@ -24,12 +24,6 @@ p {
     cursor: pointer;
 }
 
-@container gallery (max-width:640px) {
-    .cardWrapper {
-        flex-basis: calc(50% - 2rem);
-    }
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -40,6 +34,7 @@ p {
     background-color: rgb(2 29 28);
     border-radius: calc(1.5rem - 2px);
     box-shadow: 0px 0.5rem 2rem -0.5rem rgba(12, 13, 41, 0.64);
+    height: 100%;
 }
 
 .cardImg {
@@ -60,15 +55,14 @@ p {
     z-index: 1;
     transform: scale(1.02);
     transition: 0.4s;
-    height: 14rem;
     .card {
         background-color: rgb(4, 42, 40);
         transition: 0.2s;
     }
     .cardImg {
-        width: 100%;
         transform: rotate(10deg);
         transition: 0.4s;
+        bottom: -2rem;
     }
     .cardName {
         color: white;
