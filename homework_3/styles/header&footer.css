@@ -1,0 +1,104 @@
+header {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: var(--white);
+}
+
+.top_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 3.75rem;
+    width: 100%;
+    box-sizing: border-box;
+    color: var(--black1);
+    border-bottom: 1px solid var(--black205);
+}
+
+.location {
+    display: flex;
+    justify-content: space-between;
+    width: 7.5rem;
+}
+
+.company {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.bottom_header {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content;
+    grid-template-rows: auto;
+    padding: 1rem 3.75rem;
+    gap: 1.5rem;
+}
+
+.logo {
+    display: flex;
+    width: 10rem;
+    height: 2rem;
+}
+.header_logo {
+    color: var(--black1);
+}
+
+.catalogue {
+    display: flex;
+    gap: 2rem;
+}
+
+.catalogue_buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.personal_menu {
+    display: flex;
+    gap: 0.5rem;
+}
+
+/* ---------------------------------------- */
+footer {
+    display: flex;
+    width: 100%;
+    height: 21rem;
+    background-color: var(--black2);
+}
+
+.submit_area {
+    width: 30rem;
+    padding: 3.75rem;
+    box-sizing: border-box;
+}
+
+.footer_text {
+    color: white;
+}
+
+.footer_description {
+    width: 18.5rem;
+    padding-top: 0.5rem;
+    opacity: 52%;
+}
+
+.submit_form {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.footer_links {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-template-rows: repeat(6, max-content);
+    justify-content: end;
+    grid-auto-flow: column;
+    row-gap: 1rem;
+    column-gap: 6.5rem;
+    width: 100%;
+    padding: 3.75rem;
+    color: var(--white);
+}

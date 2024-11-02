@@ -1,0 +1,132 @@
+:root {
+    --black1: #000000;
+    --black2: #121212;
+    --black280: #121212cc;
+    --black205: #1212120d;
+    --navy: #233c6b;
+    --navy80: #233c6bcc;
+    --red: #f15353;
+    --red80: #f15353cc;
+    --white: #ffffff;
+    --white80: #ffffffcc;
+    --white52: #ffffff85;
+
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* icons */
+.icon24 {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.icon32 {
+    width: 2rem;
+    height: 2rem;
+}
+
+.icon48 {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* typography */
+.display_1 {
+    font-size: 5.5rem;
+    line-height: 4.75rem;
+    letter-spacing: -0.25rem;
+}
+
+.display_2 {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    letter-spacing: -0.25rem;
+}
+
+.display_3 {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.125rem;
+}
+
+.display_4 {
+    font-size: 2rem;
+    line-height: 2rem;
+    letter-spacing: -0.125rem;
+}
+
+.title_1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    letter-spacing: -0.25rem;
+}
+
+.title_2 {
+    font-size: 4rem;
+    line-height: 3.75rem;
+    letter-spacing: -0.125rem;
+}
+
+.title_3 {
+    font-size: 3rem;
+    line-height: 2.5rem;
+    letter-spacing: -0.125rem;
+}
+
+.title_4 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+}
+
+.title_4b {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 600;
+}
+
+.title_5 {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+}
+
+.body_1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.body_2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+}
+
+.body_3 {
+    font-size: 1.25rem;
+    line-height: 2rem;
+}
+
+.body_4 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+}
+
+.body_5 {
+    font-size: 1rem;
+    line-height: 1.75rem;
+}
+
+.body_6 {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.body_6b {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+}
+
+.body_7 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
