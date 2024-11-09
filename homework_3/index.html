@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="./styles/header&footer.css" />
         <link rel="stylesheet" href="./styles/elements.css" />
         <link rel="stylesheet" href="./styles/layout.css" />
+        <link rel="stylesheet" href="./styles/hero_section.css" />
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,7 +90,7 @@
                     <li>
                         <a
                             href="index.html"
-                            class="small_button_icon transparent"
+                            class="small_button_icon transparent desctop_menu"
                         >
                             <svg class="icon24">
                                 <use
@@ -101,7 +102,7 @@
                     <li>
                         <a
                             href="index.html"
-                            class="small_button_icon transparent"
+                            class="small_button_icon transparent desctop_menu"
                         >
                             <svg class="icon24">
                                 <use href="assets/icons/user.svg#user"></use>
@@ -111,13 +112,20 @@
                     <li>
                         <a
                             href="index.html"
-                            class="small_button_icon transparent"
+                            class="small_button_icon transparent desctop_menu"
                             ><svg class="icon24">
                                 <use href="assets/icons/cart.svg#cart"></use>
                             </svg>
                         </a>
                     </li>
                 </menu>
+                <div class="mobile_menu">
+                    <a href="index.html" class="small_button_icon transparent"
+                        ><svg class="icon24">
+                            <use href="assets/icons/menu.svg#menu"></use>
+                        </svg>
+                    </a>
+                </div>
             </section>
         </header>
         <main>
@@ -125,8 +133,10 @@
                 <section class="content_1">
                     <div class="large_hero_item" id="color_of_summer_outfit">
                         <div class="tile-cta_large_hero_item">
-                            <div class="display_1">Color of Summer Outfit</div>
-                            <div class="body_4 description">
+                            <div class="title_large_hero_item">
+                                Color of Summer Outfit
+                            </div>
+                            <div class="description">
                                 100+ Collections for your outfit inspirations in
                                 this summer
                             </div>
@@ -134,26 +144,25 @@
                                 <a
                                     href="index.html"
                                     class="blackstyle large_button_text"
-                                    style="width: 17.5rem"
                                     >VIEW COLLECTIONS
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="medium_hero_item" id="outdor_active">
-                        <div class="tile-cta_medium_hero_item display_3">
+                        <div class="tile-cta_medium_hero_item">
                             Outdoor Active
                         </div>
                     </div>
                     <div class="medium_hero_item" id="casual_comfort">
-                        <div class="tile-cta_medium_hero_item display_3">
+                        <div class="tile-cta_medium_hero_item">
                             Casual Comfort
                         </div>
                     </div>
                 </section>
                 <section class="content_2">
                     <div class="casual_inspirations">
-                        <div class="title_1">Casual Inspirations</div>
+                        <div class="title_casual">Casual Inspirations</div>
                         <div class="body_4">
                             Our favorite combinations for casual outfit that can
                             inspire you to apply on your daily activity.
@@ -237,7 +246,7 @@
                     </menu>
                 </section>
                 <section class="sneakers">
-                    <li class="sneaker_form">
+                    <li class="sneaker_form grid_sneaker1">
                         <div class="sneaker_image" id="sneaker1">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -250,7 +259,7 @@
                         <div class="body_1">Casual Shoe</div>
                         <div class="body_3 description">$225</div>
                     </li>
-                    <li class="sneaker_form">
+                    <li class="sneaker_form grid_sneaker2">
                         <div class="sneaker_image" id="sneaker2">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -263,7 +272,7 @@
                         <div class="body_1">Casual Shoe</div>
                         <div class="body_3 description">$225</div>
                     </li>
-                    <li class="sneaker_form merged">
+                    <li class="sneaker_form grid_sneaker3">
                         <div class="sneaker_image" id="sneaker3">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -276,7 +285,7 @@
                         <div class="body_1">Casual Shoe</div>
                         <div class="body_3 description">$225</div>
                     </li>
-                    <li class="sneaker_form merged">
+                    <li class="sneaker_form grid_sneaker4">
                         <div class="sneaker_image" id="sneaker4">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -289,7 +298,7 @@
                         <div class="body_1">Skateboard Shoe</div>
                         <div class="body_3 description">$125</div>
                     </li>
-                    <li class="sneaker_form">
+                    <li class="sneaker_form grid_sneaker5">
                         <div class="sneaker_image" id="sneaker5">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -302,7 +311,7 @@
                         <div class="body_1">Basket Shoe</div>
                         <div class="body_4 description">$125</div>
                     </li>
-                    <li class="sneaker_form">
+                    <li class="sneaker_form grid_sneaker6">
                         <div class="sneaker_image" id="sneaker6">
                             <button class="small_button_icon transparent">
                                 <svg class="icon24">
@@ -343,34 +352,52 @@
                 </div>
             </section>
             <menu class="footer_links body_7">
-                <li>POPULAR</li>
-                <li><a href="index.html" class="minilink">Shoes</a></li>
-                <li><a href="index.html" class="minilink">T-Shirt</a></li>
-                <li><a href="index.html" class="minilink">Jackets</a></li>
-                <li><a href="index.html" class="minilink">Hat</a></li>
-                <li><a href="index.html" class="minilink">Accessories</a></li>
-                <li>MENU</li>
-                <li><a href="index.html" class="minilink">All Category</a></li>
-                <li><a href="index.html" class="minilink">Gift Cards</a></li>
-                <li>
-                    <a href="index.html" class="minilink">Special Events</a>
-                </li>
-                <li><a href="index.html" class="minilink">Testimonial</a></li>
-                <li><a href="index.html" class="minilink">Blog</a></li>
-                <li>OTHER</li>
-                <li>
-                    <a href="index.html" class="minilink">Tracking Package</a>
-                </li>
-                <li><a href="index.html" class="minilink">FAQ</a></li>
-                <li>
-                    <a href="index.html" class="minilink">About Us</a>
-                </li>
-                <li><a href="index.html" class="minilink">Contact Us</a></li>
-                <li>
-                    <a href="index.html" class="minilink"
-                        >Terms and Conditions</a
-                    >
-                </li>
+                <div class="column_footer">
+                    <li>POPULAR</li>
+                    <li><a href="index.html" class="minilink">Shoes</a></li>
+                    <li><a href="index.html" class="minilink">T-Shirt</a></li>
+                    <li><a href="index.html" class="minilink">Jackets</a></li>
+                    <li><a href="index.html" class="minilink">Hat</a></li>
+                    <li>
+                        <a href="index.html" class="minilink">Accessories</a>
+                    </li>
+                </div>
+                <div class="column_footer">
+                    <li>MENU</li>
+                    <li>
+                        <a href="index.html" class="minilink">All Category</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="minilink">Gift Cards</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="minilink">Special Events</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="minilink">Testimonial</a>
+                    </li>
+                    <li><a href="index.html" class="minilink">Blog</a></li>
+                </div>
+                <div class="column_footer">
+                    <li>OTHER</li>
+                    <li>
+                        <a href="index.html" class="minilink"
+                            >Tracking Package</a
+                        >
+                    </li>
+                    <li><a href="index.html" class="minilink">FAQ</a></li>
+                    <li>
+                        <a href="index.html" class="minilink">About Us</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="minilink">Contact Us</a>
+                    </li>
+                    <li>
+                        <a href="index.html" class="minilink"
+                            >Terms and Conditions</a
+                        >
+                    </li>
+                </div>
             </menu>
         </footer>
     </body>

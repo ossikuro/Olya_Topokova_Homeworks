@@ -1,120 +1,18 @@
 main {
     display: flex;
     flex-direction: column;
-    align-content: center;
     gap: 2rem;
-    min-width: 1024px;
     max-width: 1440px;
     padding: 0 3.75rem;
     margin: auto;
+    overflow: hidden;
 }
-
 /* ----- hero section ----- */
 
 .hero_section {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-}
-
-/* ----- content_1 ----- */
-
-.content_1 {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    width: 100%;
-    max-height: 40rem;
-    aspect-ratio: 4 / 3;
-    gap: 0.75rem;
-}
-
-.large_hero_item {
-    grid-row: 1 / 3;
-    border-radius: 2.5rem;
-    background-size: cover;
-    background-position: center;
-    padding: 3.75rem;
-    color: var(--white);
-}
-
-.tile-cta_large_hero_item {
-    display: flex;
-    flex-direction: column;
-    width: 20.5rem;
-    gap: 0.5rem;
-}
-
-.description {
-    opacity: 0.8;
-}
-
-.medium_hero_item {
-    display: flex;
-    border-radius: 2.5rem;
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
-    color: var(--black2);
-}
-
-.tile-cta_medium_hero_item {
-    display: flex;
-    flex-direction: column;
-    width: 8.5rem;
-    gap: 0.5rem;
-}
-
-#color_of_summer_outfit {
-    background-image: url(../assets/content/color_of_summer_desctop.jpg);
-}
-
-#outdor_active {
-    background-image: url(../assets/content/outdor_active_desctop.jpg);
-}
-
-#casual_comfort {
-    background-image: url(../assets/content/casual_comfort_desctop.jpg);
-}
-
-/* -------Content 2-------- */
-
-.content_2 {
-    display: grid;
-    grid-template-columns: 21.5rem 1fr 1fr;
-    grid-template-rows: 1fr;
-    box-sizing: border-box;
-    gap: 0.75rem;
-}
-
-.casual_inspirations {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: 1.75rem 1.75rem 1.75rem 0;
-}
-
-#say_it_with_shirt {
-    background-image: url(../assets/content/say_it_with_shirt_desctop.jpg);
-}
-
-#funky_never_get_old {
-    background-image: url(../assets/content/funky_never_get_old_desctop.jpg);
-}
-
-.small_hero_item {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    border-radius: 2.5rem;
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
-    color: var(--white);
-}
-
-.small_hero_description {
-    width: 12rem;
 }
 
 /* ----- trending ----- */
@@ -140,19 +38,14 @@ main {
 
 .sneakers {
     display: grid;
-    grid: repeat(2, 1fr) / repeat(4, 1fr);
-    width: 100%;
-    max-height: 56rem;
-    aspect-ratio: 4 / 3;
-    gap: 0.75rem;
-}
-
-:nth-child(odd of .sneaker_form.merged) {
-    grid-column: 3 / 5;
-}
-
-:nth-child(even of .sneaker_form.merged) {
-    grid-column: 1 / 3;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+        'sneaker1 sneaker2 sneaker3 sneaker3'
+        'sneaker4 sneaker4 sneaker5 sneaker6';
+    width: auto;
+    column-gap: 0.75rem;
+    row-gap: 1.5rem;
 }
 
 .sneaker_form {
@@ -164,11 +57,36 @@ main {
 .sneaker_image {
     display: flex;
     justify-content: end;
-    height: 100%;
+    height: calc(100vw / 4 - (1.5rem * 2 + 1.5rem));
+    max-height: 32rem;
     padding: 1.25rem;
     color: var(--white);
     border-radius: 2.5rem;
     background-size: cover;
+}
+
+.grid_sneaker1 {
+    grid-area: sneaker1;
+}
+
+.grid_sneaker2 {
+    grid-area: sneaker2;
+}
+
+.grid_sneaker3 {
+    grid-area: sneaker3;
+}
+
+.grid_sneaker4 {
+    grid-area: sneaker4;
+}
+
+.grid_sneaker5 {
+    grid-area: sneaker5;
+}
+
+.grid_sneaker6 {
+    grid-area: sneaker6;
 }
 
 #sneaker1 {
@@ -193,4 +111,64 @@ main {
 
 #sneaker6 {
     background-image: url(../assets/content/sneaker_06_desctop.jpg);
+}
+
+@media (max-width: 1024px) {
+    main {
+        padding: 0 1.5rem;
+    }
+
+    .tabs_area {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .trending_buttons {
+        margin-top: 0.5rem;
+    }
+
+    .sneakers {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'sneaker1 sneaker2'
+            'sneaker3 sneaker3'
+            'sneaker4 sneaker5'
+            'sneaker6 sneaker6';
+        max-height: none;
+        aspect-ratio: auto;
+    }
+
+    .sneaker_image {
+        height: calc(100vw * 3 / 4 - (1.5rem * 2 + 0.75rem));
+        max-height: calc(100vw / 2 - (1.5rem * 2 + 0.75rem));
+        border-radius: 1.5rem;
+    }
+
+    #sneaker1 {
+        background-image: url(../assets/content/sneaker_01_mobile.jpg);
+    }
+
+    #sneaker2 {
+        background-image: url(../assets/content/sneaker_02_mobile.jpg);
+    }
+
+    #sneaker3 {
+        background-image: url(../assets/content/sneaker_03_mobile.jpg);
+    }
+
+    #sneaker4 {
+        background-image: url(../assets/content/sneaker_04_mobile.jpg);
+    }
+
+    #sneaker5 {
+        background-image: url(../assets/content/sneaker_05_mobile.jpg);
+    }
+
+    #sneaker6 {
+        background-image: url(../assets/content/sneaker_06_mobile.jpg);
+    }
+}
+
+@media (max-width: 560px) {
 }

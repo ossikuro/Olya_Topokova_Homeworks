@@ -191,3 +191,10 @@ input::placeholder {
 }
 
 /* cards */
+
+@media (max-width: 1024px) {
+    /* footer correction */
+    #subscribe {
+        width: 100%;
+    }
+}
