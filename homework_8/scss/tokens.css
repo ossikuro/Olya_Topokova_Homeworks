@@ -1,0 +1,233 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Intro";
+  font-style: normal;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"), url("../assets/fonts/Intro-Trial-SmBd.woff2") format("woff2"), url("../assets/fonts/Intro-Trial-SmBd.woff2") format("woff");
+}
+/* Переменные */
+/* Пресеты-стили шрифтов */
+/* Пресеты-стили кнопок */
+.button-small {
+  height: 2.5rem;
+  padding: 0.75rem 1rem;
+  gap: 0.5rem;
+  border-radius: 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #5222d0;
+  color: #ffffff;
+  font-family: Intro;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 0.75rem;
+}
+.button-small div {
+  height: auto;
+  position: relative;
+  bottom: 0;
+}
+.button-small img {
+  position: relative;
+  bottom: 0.125rem;
+}
+.button-small:hover {
+  background: #6335d8;
+}
+
+.button-large {
+  height: 5.25rem;
+  padding: 1.5rem 2rem;
+  gap: 1rem;
+  border-radius: 2.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #5222d0;
+  color: #ffffff;
+  font-family: Intro;
+  font-size: 2.25rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+}
+.button-large div {
+  height: auto;
+  position: relative;
+  bottom: 0;
+}
+.button-large img {
+  position: relative;
+  bottom: 0.125rem;
+}
+.button-large:hover {
+  background: #6335d8;
+}
+
+/* Пресеты лейаута */
+/* Базовая фигня */
+:root {
+  font-size: 16px;
+  padding: 5.5rem;
+}
+
+/* Шапка */
+.header {
+  max-width: 1288px;
+  padding: 1rem 0;
+  top: 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  background-color: #ffffff;
+}
+
+.header__logo {
+  height: 2.5rem;
+}
+
+/* Контент главной */
+.page {
+  max-width: 1288px;
+  padding-left: 2.5rem;
+  margin: auto;
+  display: flex;
+}
+
+.page__content {
+  width: calc(50% - 5.5rem);
+  max-width: 34rem;
+  min-height: calc(100vh - 21.5rem);
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  z-index: 100;
+}
+
+.page__title {
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  font-family: Intro;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 4.5rem;
+}
+
+.page__description {
+  margin-bottom: 2.25rem;
+  padding-right: 1rem;
+  font-family: Roboto Slab;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.page__picture {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 11rem);
+  height: 80vh;
+  background-image: url(../assets/main_img.svg);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: contain;
+}
+
+/* Контент возможностей */
+.possibilities {
+  padding: 4.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  -moz-column-gap: 4.5rem;
+       column-gap: 4.5rem;
+  row-gap: 3rem;
+  max-width: 1288px;
+  padding-left: 2.5rem;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.card__title {
+  font-family: Intro;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+}
+
+.card__description {
+  font-family: Roboto Slab;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+.card__picture-sizng {
+  max-height: 17.5rem;
+  width: 100%;
+}
+
+.newstlers {
+  padding: 1.5rem 1.25rem;
+  background-color: #ec615b;
+}
+
+.newstlers__title {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-family: Intro;
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 2.25rem;
+}
+
+.newstlers__email {
+  width: 100%;
+  margin-bottom: 1.5rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  box-sizing: border-box;
+  font-family: Roboto Slab;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+
+/* Футер */
+.footer {
+  max-width: 1288px;
+  padding-left: 2.5rem;
+  margin: auto;
+  display: flex;
+  position: relative;
+  gap: 2rem;
+  z-index: 200;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #5222d0;
+  font-family: Roboto Slab;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 2rem;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}/*# sourceMappingURL=tokens.css.map */

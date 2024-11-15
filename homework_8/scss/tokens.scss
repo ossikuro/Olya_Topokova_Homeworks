@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Intro';
+    font-style: normal;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local('Roboto'),
+        /* Если не получилось, загрузит woff2 */
+            url('../assets/fonts/Intro-Trial-SmBd.woff2') format('woff2'),
+        /* Если браузер не поддерживает woff2, загрузит woff */
+            url('../assets/fonts/Intro-Trial-SmBd.woff2') format('woff');
+}
+
+/* Переменные */
+$page-padding: 5.5rem;
+$content-left-push: 2.5rem;
+
+/* Пресеты-стили шрифтов */
+
+@mixin page_title {
+    font-family: Intro;
+    font-size: 3.75rem;
+    font-weight: 400;
+    line-height: 4.5rem;
+}
+
+@mixin page_subtitle {
+    font-family: Intro;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+
+@mixin CTA_button_text {
+    font-family: Intro;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 2.25rem;
+}
+
+@mixin regular_button_text {
+    font-family: Intro;
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 0.75rem;
+}
+
+@mixin footer_link {
+    font-family: Roboto Slab;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+@mixin body {
+    font-family: Roboto Slab;
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 2rem;
+}
+
+/* Пресеты-стили кнопок */
+
+@mixin button {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #5222d0;
+    color: #ffffff;
+    div {
+        height: auto;
+        position: relative;
+        bottom: 0;
+    }
+    img {
+        position: relative;
+        bottom: 0.125rem;
+    }
+    &:hover {
+        background: #6335d8;
+    }
+}
+
+.button-small {
+    height: 2.5rem;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+    border-radius: 1.25rem;
+    @include button;
+    @include regular_button_text;
+}
+
+.button-large {
+    height: 5.25rem;
+    padding: 1.5rem 2rem;
+    gap: 1rem;
+    border-radius: 2.5rem;
+    @include button;
+    @include CTA_button_text;
+}
+
+/* Пресеты лейаута */
+@mixin page-layout {
+    max-width: 1288px;
+    padding-left: $content-left-push;
+    margin: auto;
+}
+
+/* Базовая фигня */
+:root {
+    font-size: 16px;
+    padding: $page-padding;
+}
+
+/* Шапка */
+
+.header {
+    max-width: 1288px;
+    padding: 1rem 0;
+    top: 0;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    background-color: #ffffff;
+}
+
+.header__logo {
+    height: 2.5rem;
+}
+
+/* Контент главной */
+
+.page {
+    @include page-layout;
+    display: flex;
+}
+
+.page__content {
+    width: calc(50% - $page-padding);
+    max-width: 34rem;
+    min-height: calc(100vh - ($page-padding * 2 + 4.5rem + 2rem + 4rem));
+    height: fit-content;
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+.page__title {
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    @include page_title;
+}
+
+.page__description {
+    margin-bottom: 2.25rem;
+    padding-right: 1rem;
+    @include body;
+}
+
+.page__picture {
+    position: absolute;
+    right: 0;
+    width: calc(100% - $page-padding * 2);
+    height: 80vh;
+    background-image: url(../assets/main_img.svg);
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: contain;
+}
+
+/* Контент возможностей */
+
+.possibilities {
+    padding: 4.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 4.5rem;
+    row-gap: 3rem;
+    @include page-layout;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card__title {
+    @include page_subtitle;
+}
+
+.card__description {
+    @include body;
+}
+
+.card__picture-sizng {
+    max-height: 17.5rem;
+    width: calc(100%);
+}
+
+.newstlers {
+    padding: 1.5rem 1.25rem;
+    background-color: #ec615b;
+}
+
+.newstlers__title {
+    margin-bottom: 0.5rem;
+    color: #ffffff;
+    @include page_subtitle;
+}
+
+.newstlers__email {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    height: 3rem;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+    @include body;
+}
+
+/* Футер */
+
+.footer {
+    max-width: 1288px;
+    padding-left: 2.5rem;
+    margin: auto;
+    display: flex;
+    position: relative;
+    gap: 2rem;
+    z-index: 200;
+}
+
+.footer__link {
+    text-decoration: none;
+    color: #5222d0;
+    @include footer_link;
+    &:hover {
+        text-decoration: underline;
+    }
+}
