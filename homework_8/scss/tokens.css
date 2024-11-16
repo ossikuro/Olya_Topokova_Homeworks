@@ -80,7 +80,7 @@
 }
 
 /* Шапка */
-.header {
+.header-desctop {
   max-width: 1288px;
   padding: 1rem 0;
   top: 0;
@@ -96,11 +96,11 @@
 }
 
 /* Контент главной */
-.page {
+.page-main {
+  display: flex;
   max-width: 1288px;
   padding-left: 2.5rem;
   margin: auto;
-  display: flex;
 }
 
 .page__content {
@@ -146,8 +146,15 @@
 }
 
 /* Контент возможностей */
-.possibilities {
-  padding: 4.5rem 0;
+.page-secondary {
+  padding: 5.5rem 0;
+  max-width: 1288px;
+  padding-left: 2.5rem;
+  margin: auto;
+}
+
+.possibilities-layout {
+  padding: 2rem 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   -moz-column-gap: 4.5rem;
@@ -158,7 +165,14 @@
   margin: auto;
 }
 
-.card {
+.possibilities__title {
+  font-family: Intro;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 4.5rem;
+}
+
+.card-layout {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -183,7 +197,7 @@
   width: 100%;
 }
 
-.newstlers {
+.newstlers-layout {
   padding: 1.5rem 1.25rem;
   background-color: #ec615b;
 }
@@ -209,8 +223,8 @@
   line-height: 2rem;
 }
 
-/* Футер */
-.footer {
+/* Меню */
+.menu-desctop {
   max-width: 1288px;
   padding-left: 2.5rem;
   margin: auto;
@@ -220,7 +234,7 @@
   z-index: 200;
 }
 
-.footer__link {
+.menu__link {
   text-decoration: none;
   color: #5222d0;
   font-family: Roboto Slab;
@@ -228,6 +242,6 @@
   font-weight: 300;
   line-height: 2rem;
 }
-.footer__link:hover {
+.menu__link:hover {
   text-decoration: underline;
 }/*# sourceMappingURL=tokens.css.map */
